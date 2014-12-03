@@ -4,17 +4,17 @@ MAINTAINER tobe tobeg3oogle@gmail.com
 RUN apt-get update
 
 # Install Oracle Java7
-RUN apt-get install -y software-properties-common
-RUN add-apt-repository -y ppa:webupd8team/java
-RUN apt-get update
-RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
-RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
-RUN apt-get install -y oracle-java7-installer
+RUN apt-get install -y software-properties-common && \
+    add-apt-repository -y ppa:webupd8team/java && \
+    apt-get update && \
+    echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+    echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections && \
+    apt-get install -y oracle-java7-installer
 ENV JAVA_HOME /usr/lib/jvm/java-7-oracle/
 
 # Install tools
-RUN apt-get install -y git
-RUN apt-get install -y maven
+RUN apt-get install -y git && \
+    apt-get install -y maven
 
 # Install HBase
 RUN git clone git://git.apache.org/hbase.git /hbase
