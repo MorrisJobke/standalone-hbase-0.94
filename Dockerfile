@@ -17,9 +17,9 @@ RUN apt-get install -y git
 RUN apt-get install -y maven
 
 # Install HBase
-RUN git clone git://git.apache.org/hbase.git /opt/hbase
-WORKDIR /opt/hbase
-RUN git checkout 0.94.11 # use other version
+RUN git clone git://git.apache.org/hbase.git /hbase
+WORKDIR /hbase
+RUN git checkout 0.94.11 # use specified version
 RUN mvn clean package -DskipTests
 
 # ZooKeeper
