@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER tobe tobeg3oogle@gmail.com
 
-RUN apt-get update
+RUN apt-get -y update
 
 # Install Oracle Java7
 RUN apt-get install -y software-properties-common && \

@@ -1,5 +1,9 @@
 # standalone-hbase-0.94
 
+![](hbase_and_docker.png)
+
+## Introduction
+
 The image [tobegit3hub/standalone-hbase-0.94](https://registry.hub.docker.com/u/tobegit3hub/standalone-hbase-0.94/) is based on Ubuntu 14.04, Oracle Java 7 and HBase 0.94.11.
 
 You can easily specify the version of OS, Java and HBase in [Dockerfil](Dockerfile).
