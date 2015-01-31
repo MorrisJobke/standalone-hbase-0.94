@@ -19,7 +19,7 @@ RUN apt-get install -y git && \
 # Install HBase
 RUN git clone git://git.apache.org/hbase.git /hbase
 WORKDIR /hbase
-RUN git checkout 0.94.11 # use specified version
+RUN git checkout 0.98.6 # use specified version
 RUN mvn clean package -DskipTests
 
 # ZooKeeper
