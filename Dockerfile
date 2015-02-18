@@ -43,6 +43,6 @@ RUN sed -i 's/^\(log4j\.logger\.org\.apache\.zookeeper=\)INFO/\1WARN/' /hbase/co
 	sed -i 's/^\(log4j\.logger\.org\.apache\.hadoop\.hbase\.zookeeper\.ZKUtil=\)INFO/\1WARN/' /hbase/conf/log4j.properties && \
 	sed -i 's/^\(log4j\.logger\.org\.apache\.hadoop\.hbase\.zookeeper\.ZooKeeperWatcher=\)INFO/\1WARN/' /hbase/conf/log4j.properties && \
 	sed -i 's/^\(hbase\.root\.logger=\)INFO/\1WARN/' /hbase/conf/log4j.properties && \
-	sed -i 's/^\(hbase\.root\.security=\)INFO/\1WARN/' /hbase/conf/log4j.properties
+	sed -i 's/^\(hbase\.security\.logger=\)INFO/\1WARN/' /hbase/conf/log4j.properties
 
 CMD ["./bin/hbase", "master", "start"]
